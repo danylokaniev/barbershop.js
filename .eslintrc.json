@@ -28,6 +28,7 @@
 	// 	"import/resolver": "typescript"
 	// },
 	"rules": {
+		"semi": ["warn", "never"],
 		"no-tabs": "off",
 		"object-curly-newline": ["error", { "multiline": true }],
 		"indent": ["warn", "tab", {"SwitchCase": 1}],

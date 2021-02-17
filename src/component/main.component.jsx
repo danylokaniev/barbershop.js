@@ -1,9 +1,9 @@
-import React, { useState, useCallback } from "react";
-import s from "./main.component.m.css";
+import React, { useState, useCallback } from 'react'
+import s from './main.component.m.css'
 
 function MyComponent() {
-	const [name, setState] = useState("123456");
-	const handleCahnge = useCallback(e => setState(e.target.value));
+	const [name, setState] = useState('123456')
+	const handleCahnge = useCallback(e => setState(e.target.value))
 	return (
 		<>
 			<div className="body">dsfsdf</div>
@@ -16,7 +16,7 @@ function MyComponent() {
 			<div>dsfsdf</div>
 			<div>dsfsdf</div>
 		</>
-	);
+	)
 }
 
-export default MyComponent;
+export default MyComponent
