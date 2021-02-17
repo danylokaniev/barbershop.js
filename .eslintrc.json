@@ -1,0 +1,62 @@
+/*
+	(!) .gitignore file is not in use
+*/
+
+{
+	"root": true,
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint"
+	],
+	// "settings": {
+	// 	"import/resolver": "typescript"
+	// },
+	"rules": {
+		"no-tabs": "off",
+		"object-curly-newline": ["error", { "multiline": true }],
+		"indent": ["warn", "tab", {"SwitchCase": 1}],
+		"spaced-comment": "off",
+		"import/prefer-default-export": "off",
+		"no-multiple-empty-lines": "off",
+		"import/no-cycle": "warn",
+		"import/extensions": "off",
+		"max-classes-per-file": "off",
+		"lines-between-class-members": "off",
+		"comma-dangle": "off",
+		"max-len": "off",
+		"prefer-template": "warn",
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"],
+		"linebreak-style": 0,
+		"react/prop-types": "off",
+		"import/no-absolute-path": "warn",
+		"import/no-unresolved": "warn",
+		"arrow-parens": ["error", "as-needed"]
+		// "func-names": ["warn", "as-needed"],
+		// "no-trailing-spaces": ["error", {  }],
+		// "padded-blocks": ["warn", {
+		//	 "blocks": "off",
+		//	 "classes": "off",
+		//	 "switches": "off"
+		// }],
+		// "no-case-declarations": "off",
+		// "no-else-return": "off",
+		// "keyword-spacing": ["error", { "before": true, "after": true }]
+	}
+}

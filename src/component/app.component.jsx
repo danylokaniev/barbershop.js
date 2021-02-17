@@ -1,9 +1,9 @@
-import React, { useState, useCallback } from "react";
-import s from "./app.component.m.css";
-import Main from './main.component'
+import React, { useState, useCallback } from 'react';
+import s from './app.component.m.css';
+import Main from './main.component';
 
 function MyComponent() {
-	const [name, setState] = useState("123456");
+	const [name, setState] = useState('123456');
 	const handleCahnge = useCallback(e => setState(e.target.value));
 	return (
 		<>
