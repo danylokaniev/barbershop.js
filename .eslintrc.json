@@ -48,7 +48,8 @@
 		"react/prop-types": "off",
 		"import/no-absolute-path": "warn",
 		"import/no-unresolved": "warn",
-		"arrow-parens": ["error", "as-needed"]
+		"arrow-parens": ["error", "as-needed"],
+		"react/jsx-one-expression-per-line": "off",
 		// "func-names": ["warn", "as-needed"],
 		// "no-trailing-spaces": ["error", {  }],
 		// "padded-blocks": ["warn", {
