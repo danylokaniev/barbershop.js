@@ -48,13 +48,13 @@ const Calendar = () => {
 
 		for (let i = 0; i < 7; i++) {
 			days.push(
-				<div className={`${styles.col} ${styles.colCenter}`} key={i} >
+				<div className={`${styles.col} ${styles.colCenter}`} key={i}>
 					{format(addDays(startDate, i), dateFormat)}
-				</div >
+				</div>
 			)
 		}
 
-		return <div className={`${styles.days} ${styles.row}`} > {days}</div >
+		return <div className={`${styles.days} ${styles.row}`}> {days}</div>
 	}
 
 	const renderCells = () => {
@@ -69,6 +69,9 @@ const Calendar = () => {
 
 		let days = []
 		let day = startDate
+		console.log(format(new Date(), 'eee LLL d y pp'))
+		console.log(format(new Date(), 'eee LLL d y XXXX'))
+		console.log(format(new Date(), 'eee LLL d y xxxx'))
 		let formattedDate = ''
 
 		while (day <= endDate) {
@@ -80,9 +83,9 @@ const Calendar = () => {
 						className={`${styles.col} ${styles.cell} ${!isSameMonth(day, monthStart)
 							? styles.disabled
 							: isSameDay(day, selectedDate) ? styles.selected : ''
-							}`}
+						}`}
 						key={day}
-						onClick={() => onDateClick(parse(cloneDay))}
+						onClick={() => { console.log(cloneDay); onDateClick(parse(cloneDay, 'eeee', new Date())) }}
 					>
 						<span className={styles.number}>{formattedDate}</span>
 						<span className={styles.bg}>{formattedDate}</span>
@@ -101,6 +104,7 @@ const Calendar = () => {
 	}
 
 	const onDateClick = day => {
+		console.log(day)
 		setState({ ...state, selectedDate: day })
 	}
 

@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom'
 
-const App = lazy(() => import('./component/App.jsx'))
+const App = lazy(() => import('./pages/App.jsx'))
 ReactDOM.render(
 	<Suspense fallback={<p>loading....</p>}>
 		<App />

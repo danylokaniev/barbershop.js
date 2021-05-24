@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { images } from './images'
 import styles from './Slider.m.css'
 
-const ImageSlider = props => {
+const ImageSlider = ({ images }) => {
 	const [current, setCurrent] = useState(0)
 	const { length } = images
 
