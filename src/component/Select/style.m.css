@@ -1,0 +1,100 @@
+.wrapper {
+    z-index: 200;
+    position: relative;
+  }
+  .wrapper.active {
+    z-index: 300;
+  }
+  .wrapper.active .wrapperInput {
+    box-shadow: var(--sActiveBoxShadow);
+    border-color: var(--sActiveBorder);
+    color: var(--sActiveColor);
+  }
+  .wrapper.disabled .wrapperInput {
+    background: var(--sDisabledBg);
+    border-color: var(--sDisabledBorder);
+    color: var(--sDisabledColor);
+    cursor: not-allowed;
+  }
+  .wrapper.active .menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .wrapper.active .wrapperInput > svg {
+    transform: translate(0, -50%) rotate(180deg);
+  }
+  .wrapperInput {
+    min-height: 46px;
+    min-width: 200px;
+    display: block;
+    border: 1px solid var(--sBorder);
+    border-radius: 3px;
+    padding: 14px 30px 14px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--sColor);
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+  .wrapperInput:hover {
+    color: var(--sHoverColor);
+    border-color: var(--sHoverBorder);
+  }
+  .wrapperInput.big {
+    min-height: 56px;
+    padding: 19px 30px 19px 20px;
+  }
+  .wrapperInput > svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    width: 10px;
+    height: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  .menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    background: var(--sMenuBg);
+    border: 1px solid var(--sMenuBorder);
+    border-radius: 3px;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    max-height: 400px;
+    overflow: auto;
+  }
+  .menu.bottom {
+    top: 100%;
+    bottom: auto;
+  }
+  .menu.top {
+    top: auto;
+    bottom: 100%;
+  }
+  .option {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--sOptionColor);
+    transition: 0.3s ease-in-out;
+    position: relative;
+  }
+  .option:hover {
+    background: var(--sOptionHoverBg);
+    color: var(--sOptionHoverColor);
+  }

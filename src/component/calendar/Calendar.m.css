@@ -182,3 +182,7 @@
 	flex-basis: calc(100% / 7);
 	width: calc(100% / 7);
 }
+
+.disCell {
+    background-color: #FFC4B8 !important;
+}

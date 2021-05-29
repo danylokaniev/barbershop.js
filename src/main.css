@@ -48,3 +48,92 @@ input, button, textarea, select {
 		scroll-behavior: auto !important;
 	}
 }
+
+.scroll {
+    overflow: auto !important;
+    z-index: inherit;
+  }
+  
+  /* .scroll:hover::-webkit-scrollbar {
+      display: initial;
+  } */
+  
+  .scroll::-webkit-scrollbar {
+    display: initial;
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scroll::-webkit-scrollbar {
+    width: 0.4em;
+    height: 0.4em;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 0.2em;
+  }
+
+
+
+body {
+	--transition: 0.3s;
+
+	--white: #fff;
+
+	--redButton: #de5f57;
+	--greenButton: #26a17b;
+	--turquoiseButton: #3d9999;
+	--redHoverButton: #cf534b;
+	--greenHoverButton: #1e8968;
+	--turquoiseHoverButton: #378e8e;
+
+	--blueButton: #5fd4d4;
+	--blueHoverButton: #50a9a9;
+
+    --primary: rgb(255, 255, 255);
+	--primaryValue: 255, 255, 255;
+
+	--secondary: rgb(18, 21, 30);
+	--secondaryValue: 18, 21, 30;
+
+	--tableFill: rgba(204, 204, 204, 0.02);
+	--tableBorder: rgba(18, 21, 30, 0.07);
+	--tableHover: rgba(218, 218, 218, 0.1);
+
+	--greenPrimary: #3d9999;
+	--greenSecondary: #52a49a;
+
+	--redPrimary: #de5f57;
+
+	--disabledButton: #d3d3d3;
+	--disabledButtonText: #fff;
+	--textSecondaryValue: 18, 21, 30;
+
+	--mainButtonColor: #de5f57;
+	--mainHoverButtonColor: #cf534b;
+
+	/* select */
+	--sBorder: rgba(18, 21, 30, 0.05);
+	--sColor: rgba(0, 0, 0, 0.4);
+
+	--sHoverColor: rgba(18, 21, 30, 0.6);
+	--sHoverBorder: rgba(18, 21, 30, 0.12);
+
+	--sActiveBoxShadow: 0 0 0 1px rgba(61, 153, 153, 0.35);
+	--sActiveBorder: #3d9999;
+	--sActiveColor: #000;
+
+	--sDisabledBg: #fcfcfc;
+	--sDisabledBorder: #fcfcfc;
+	--sDisabledColor: rgba(18, 21, 30, 0.2);
+
+	--sMenuBg: #fff;
+	--sMenuBorder: rgba(18, 21, 30, 0.05);
+
+	--sOptionColor: #000;
+	--sOptionHoverBg: rgba(61, 153, 153, 0.05);
+	--sOptionHoverColor: #3d9999;
+}

@@ -10,11 +10,48 @@ import {
 	isSameDay,
 	parse,
 	addMonths,
-	subMonths
+	subMonths,
+	addYears
 } from 'date-fns'
 import styles from './Calendar.m.css'
 
-const Calendar = () => {
+const getDate = stringDate => {
+	const [, month, day, year] = stringDate.toString().split(' ')
+	let monthNumber = 0
+	switch (month) {
+		case 'Jan':
+			monthNumber = '01'
+			break
+		case 'Feb': monthNumber = '02'
+			break
+		case 'Mar': monthNumber = '03'
+			break
+		case 'Apr': monthNumber = '04'
+			break
+		case 'May': monthNumber = '05'
+			break
+		case 'Jun': monthNumber = '06'
+			break
+		case 'Jul': monthNumber = '07'
+			break
+		case 'Aug': monthNumber = '08'
+			break
+		case 'Sep': monthNumber = '09'
+			break
+		case 'Oct': monthNumber = '10'
+			break
+		case 'Nov': monthNumber = '11'
+			break
+		case 'Dec':
+		default:
+			monthNumber = '12'
+			break
+	}
+
+	return [day, monthNumber.toString(), year].join('-')
+}
+
+const Calendar = ({ handleDayClick, selectedDays }) => {
 	const [state, setState] = useState({
 		currentMonth: new Date(),
 		selectedDate: new Date()
@@ -78,14 +115,19 @@ const Calendar = () => {
 			for (let i = 0; i < 7; i++) {
 				formattedDate = format(day, dateFormat)
 				const cloneDay = day
+				const alreadySelected = selectedDays?.includes(getDate(cloneDay))
+
 				days.push(
 					<div
-						className={`${styles.col} ${styles.cell} ${!isSameMonth(day, monthStart)
-							? styles.disabled
-							: isSameDay(day, selectedDate) ? styles.selected : ''
-						}`}
+						className={`${styles.col} 
+                        ${styles.cell} 
+                        ${alreadySelected ? styles.disCell : ''} 
+                        ${!isSameMonth(day, monthStart)
+		? styles.disabled
+		: isSameDay(day, selectedDate) ? styles.selected : ''
+}`}
 						key={day}
-						onClick={() => { console.log(cloneDay); onDateClick(parse(cloneDay, 'eeee', new Date())) }}
+						onClick={() => { if (!alreadySelected) handleDayClick(getDate(cloneDay)) }}
 					>
 						<span className={styles.number}>{formattedDate}</span>
 						<span className={styles.bg}>{formattedDate}</span>

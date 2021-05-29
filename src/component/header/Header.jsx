@@ -21,6 +21,10 @@ const PointNavLink = [
 		path: 'haircuts',
 	},
 	{
+		title: 'Hairdresser',
+		path: 'hairdresser',
+	},
+	{
 		title: 'Contact Us',
 		path: 'contact',
 	},

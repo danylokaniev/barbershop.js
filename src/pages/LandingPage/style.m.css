@@ -50,6 +50,17 @@
 	flex: 1;
 }
 
+@media (max-width: 786px) {
+    .priceImages {
+        display: none;
+    }
+}
+
+.block:last-child {
+    height: auto;
+}
+
+
 
 .imagesBlock {
 	flex:1;
@@ -124,4 +135,32 @@
 		grid-template-rows: 1fr;
 	}
 }
+
+
+.hairdresser {
+    display: flex;
+}
+
+.calendar {
+    flex: 2;
+}
+
+.hairdresserSelect {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    padding: 5rem;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+@media (max-width: 786px) {
+    .hairdresser {
+        flex-flow: column;
+    }
+}
+
+
 
